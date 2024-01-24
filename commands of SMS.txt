@@ -1,0 +1,79 @@
+ create database mps;
+
+ use mps;
+
+ create table admission(adno int(5),rno int(3),sname char(10),address char(30),phon int(15),clas int(4));
+
+ insert into admission values(2230,28,'pooja','MT-2 Viman nagar',9850206396,12);
+ insert into admission values(2468,36,'Aarti','TJ-3 MES Colony',6789025890,8);
+ insert into admission values(9426,12,'Varsha','178-3 Sarvatra vihar',2986046562,10);
+ insert into admission values(4923,21,'Riya','84 shahu complex',1234567890,6);
+
+mysql> select * from admission;
++------+------+--------+----------------------+------------+------+
+| adno | rno  | sname  | address              | phon       | clas |
++------+------+--------+----------------------+------------+------+
+| 2230 |   28 | pooja  | MT-2 Viman nagar     | 9850206396 |   12 |
+| 2468 |   36 | Aarti  | TJ-3 MES Colony      | 6789025890 |    8 |
+| 9426 |   12 | Varsha | 178-3 Sarvatra vihar | 2986046562 |   10 |
+| 4923 |   21 | Riya   | 84 shahu complex     | 1234567890 |    6 |
++------+------+--------+----------------------+------------+------+
+
+ create table marks(adno int(5),stname char(10),stmarks int(3));
+ insert into marks values(2248,'Ritika',50);
+ insert into marks values(2232,'Anuja',40);
+ insert into marks values(2218,'Manu',42);
+ insert into marks values(2256,'Arohi',35);
+
+
+mysql> select * from marks;
++------+--------+---------+
+| adno | stname | stmarks |
++------+--------+---------+
+| 2248 | Ritika |      50 |
+| 2232 | Anuja  |      40 |
+| 2218 | Manu   |      42 |
+| 2256 | Arohi  |      35 |
++------+--------+---------+
+
+ create table result(stname char(15),PT1 int(3),PT2 int(3),PT3 int(3),FINALS int(3));
+ insert into result values('Arohi',50,46,48,30);
+ insert into result values('Riya',45,40,43,38);
+ insert into result values('Kiara',36,37,18,43);
+ insert into result values('Varsha',50,48,46,49);
+ insert into result values('Rohit',42,48,50,44);
+ insert into result values('Aakash',32,36,42,48);
+ insert into result values('Shreyas',23,36,19,27);
+ insert into result values('Naira',48,45,47,42);
+
+mysql> select * from result;
++---------+------+------+------+--------+
+| stname  | PT1  | PT2  | PT3  | FINALS |
++---------+------+------+------+--------+
+| Arohi   |   50 |   46 |   48 |     30 |
+| Riya    |   45 |   40 |   43 |     38 |
+| Kiara   |   36 |   37 |   18 |     43 |
+| Varsha  |   50 |   48 |   46 |     49 |
+| Rohit   |   42 |   48 |   50 |     44 |
+| Aakash  |   32 |   36 |   42 |     48 |
+| Shreyas |   23 |   36 |   19 |     27 |
+| Naira   |   48 |   45 |   47 |     42 |
++---------+------+------+------+--------+
+
+ create table student(session int(5),stname char(23),stclass int(4),stsec char(2),stroll int(5),sub1 char(20),sub2 char(20),sub3 char(20));
+insert into student values(2021,'Kartik',12,'A',1201,'English','CS','Maths');
+ insert into student values(2020,'Arya',10,'C',1028,'Sanskrit','Maths','SST');
+insert into student values(2019,'Rishika',11,'A',1135,'biology','Hindi','English'); 
+insert into student values(2018,'Ruhi',8,'B',1248,'Sanskrit','Hindi','Science');
+mysql> select * from student;
++---------+---------+---------+-------+--------+----------+-------+---------+
+| session | stname  | stclass | stsec | stroll | sub1     | sub2  | sub3    |
++---------+---------+---------+-------+--------+----------+-------+---------+
+|    2021 | Kartik  |      12 | A     |   1201 | English  | CS    | Maths   |
+|    2020 | Arya    |      10 | C     |   1028 | Sanskrit | Maths | SST     |
+|    2019 | Rishika |      11 | A     |   1135 | biology  | Hindi | English |
+|    2018 | Ruhi    |       8 | B     |   1248 | Sanskrit | Hindi | Science |
++---------+---------+---------+-------+--------+----------+-------+---------+
+
+
+
